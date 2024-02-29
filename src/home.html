@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="publish-post">
+				<div class="publish-post__container">
+					<div class="publish-post__body">
+
+
+						<div class="publish-post__your-story story-your-post-publish">
+							<div class="story-your-post-publish__left left-publish-post-your-story">
+								<img class="left-publish-post-your-story__img" src="@img/header/profile-img.png" alt="">
+							</div>
+							<div class="story-your-post-publish__right right-publish-post-your-story">
+								<div class="right-publish-post-your-story__title">Title</div>
+								<div class="right-publish-post-your-story__text">Your story</div>
+
+							</div>
+
+						</div>
+						<div class="publish-post__add-tag tag-add-post-publish">
+
+							<div data-spollers class="tag-add-post-publish__spollers spollers">
+								<div class="tag-add-post-publish__spollers-item spollers__item">
+									<button type="button" data-spoller
+										class="tag-add-post-publish__spollers-title title-spollers-publish-post-add-tag spollers__title">
+										<img class="title-spollers-publish-post-add-tag__img"
+											src="@img/publish-post/urbanizm.svg" alt="">
+										<div class="title-spollers-publish-post-add-tag__title">Urbanism</div>
+									</button>
+									<div class="tag-add-post-publish__spollers-body spollers__body">Контент спойлера
+									</div>
+								</div>
+							</div>
+
+							<div class="tag-add-post-publish__text">Add a tag here...</div>
+
+						</div>
+						<div class="publish-post__publish publish-post-publish">
+							<div class="publish-post-publish__wrap-icon">
+
+								<div class="publish-post-publish__icon-ai ai-icon-publish-post-publish">
+									<img class="ai-icon-publish-post-publish__img" src="@img/publish-post/ai.svg"
+										alt="">
+								</div>
+								<div class="publish-post-publish__icon-items items-icon-publish-post-publish">
+									<img class="items-icon-publish-post-publish__img" src="@img/publish-post/Image.svg"
+										alt="">
+									<img class="items-icon-publish-post-publish__img" src="@img/publish-post/Video.svg"
+										alt="">
+									<img class="items-icon-publish-post-publish__img"
+										src="@img/publish-post/comment.svg" alt="">
+
+								</div>
+							</div>
+							<button class="publish-post-publish__button">Publish</button>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
