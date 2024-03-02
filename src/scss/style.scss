@@ -31,7 +31,7 @@ $maxWidth: 1920;
 $maxWidthContainer: 880;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 0;
+$containerPadding: 20;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -40,7 +40,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 $pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(759.98); // Телефоны L
-$mobileSmall: em(479.98); // Телефоны S
+$mobileSmall: em(379.98); // Телефоны S
 
 // Тип адаптива:
 // 1 = отзывчивость (у контейнера нет брейкпоинтов),
@@ -108,6 +108,10 @@ body {
 				padding: 0 rem(math.div($containerPadding, 2));
 			}
 		}
+		@media (max-width: 1200px) {
+			margin: 0 11.1111% 0 30.1587% !important;
+		}
+
 		@media (max-width: $pc) {
 			max-width: rem(970);
 		}
@@ -115,11 +119,35 @@ body {
 			max-width: rem(750);
 		}
 		@media (max-width: $mobile) {
+			padding: 0px 30px;
+
 			max-width: none;
 			@if ($containerPadding>0 and $maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
+				// padding: 0 rem(math.div($containerPadding, 2));
 			}
 		}
+	}
+}
+
+[class*="__container"] {
+	@include adaptiveValue("max-width", 880, 740, 1400, 1260, 1);
+
+	// @include adaptiveValue("padding-left", 140, 60, 1440, 760, 1);
+
+	// @media (max-width: 1440px) {
+	// 	padding: 0px 140px !important;
+	// }
+
+	@media (max-width: 1200px) {
+		margin: 0 auto 0 30.1587% !important;
+		padding-right: 140px;
+	}
+	@media (max-width: $mobile) {
+		margin: 0 auto !important;
+		padding: 0px 60px;
+		@include adaptiveValue("max-width", 880, 740, 1400, 1260, 1);
+		@include adaptiveValue("padding-left", 60, 10, 760, 380, 1);
+		@include adaptiveValue("padding-right", 60, 10, 760, 380, 1);
 	}
 }
 

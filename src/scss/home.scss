@@ -2,9 +2,9 @@
     /* .publish-post__container */
 
     &__container {
-        margin-bottom: 20px;
-        // @include adaptiveValue("max-width", 880, 740, 1920, 1260, 1);
-        // margin: 0 28.64% 0 25.520833%;
+        margin-bottom: 20px !important;
+        // @include adaptiveValue("max-width", 880, 740, 1400, 1260, 1);
+        //margin: 0 11.1111% 0 30.1587%;
     }
 
     /* .publish-post__body */
@@ -251,7 +251,6 @@
     &__container {
         overflow: auto;
         margin-bottom: 20px;
-        padding: 0px 60px;
     }
 
     /* .add-stories__body */
@@ -270,6 +269,7 @@
     /* .items-add-stories-body__item */
 
     &__item {
+        margin-bottom: 20px;
     }
 }
 .item-body-stories-add-items {
@@ -297,6 +297,14 @@
     position: relative;
 
     padding: 10px;
+
+    @media (max-width: $mobile) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+    }
 
     /* .text-icon-items-add-stories-body-item__img */
 
@@ -327,6 +335,9 @@
         line-height: 140%;
         letter-spacing: 0%;
         text-align: left;
+        @media (max-width: $mobile) {
+            display: none;
+        }
     }
 
     /* .text-icon-items-add-stories-body-item__bg */
@@ -353,10 +364,10 @@
     /* .main-block__container */
 
     &__container {
-        padding: 0px 60px;
+        // padding: 0px 60px;
 
-        @include adaptiveValue("padding-left", 60, 0, 980, 380, 1);
-        @include adaptiveValue("padding-right", 60, 10, 980, 380, 1);
+        // @include adaptiveValue("padding-left", 60, 10, 980, 380, 1);
+        // @include adaptiveValue("padding-right", 60, 10, 980, 380, 1);
     }
 
     /* .main-block__body */
@@ -1040,9 +1051,12 @@
     justify-content: center;
     background-color: #f5f7fa;
     @media (max-width: $mobile) {
-        height: 137px;
+        height: 257px;
     }
 
+    @media (max-width: $mobileSmall) {
+        height: 137px;
+    }
     /* .video-main-block-body__img */
 
     &__img {
@@ -1054,4 +1068,107 @@
 }
 .body-block-main__video {
     margin-bottom: 20px;
+}
+
+.tags-menu {
+    /* .tags-menu__container */
+
+    &__container {
+    }
+
+    /* .tags-menu__body */
+
+    &__body {
+    }
+}
+.body-menu-tags {
+    /* .body-menu-tags__items */
+
+    &__items {
+        margin-bottom: 20px;
+    }
+}
+.items-tags-menu-body {
+    display: flex;
+    overflow: auto;
+
+    /* .items-tags-menu-body__item */
+
+    &__item {
+    }
+}
+.item-body-menu-tags-items {
+    display: flex;
+    gap: 5px;
+    padding: 11px 31px;
+
+    /* .item-body-menu-tags-items__icon */
+
+    &__icon {
+    }
+
+    /* .item-body-menu-tags-items__text */
+
+    &__text {
+        /* p-16-140/book */
+        color: rgb(111, 115, 136);
+        font-family: Futura PT;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+}
+
+.item-body-menu-tags-items_active {
+    /* for-stroke */
+    border: 1px solid rgb(225, 228, 234);
+    border-radius: 32px;
+    /* white */
+    background: rgb(255, 255, 255);
+    /* p-16-140/medium */
+    color: rgb(45, 49, 66);
+    font-family: Futura PT;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.item-body-stories-add-items-wrap-border-add {
+    /* .item-body-stories-add-items-wrap-border-add__icon-text */
+
+    &__icon-text {
+    }
+}
+.item-body-stories-add-items-wrap-border-add-icon-text {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    @media (max-width: $mobile) {
+        width: 100px;
+        height: 100px;
+    }
+    /* .item-body-stories-add-items-wrap-border-add-icon-text__img */
+
+    &__img {
+    }
+
+    /* .item-body-stories-add-items-wrap-border-add-icon-text__text */
+
+    &__text {
+        color: rgb(72, 75, 96);
+        font-family: Futura PT;
+        font-size: 14px;
+        font-weight: 450;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
 }
